@@ -1,0 +1,91 @@
+body{ 
+	background-color: black;
+	color: chartreuse;
+}
+
+table{
+	border-style: solid;
+    border-color: darkgreen;
+	border-collapse: collapse;
+}
+
+/*стиль кнопки*/
+button{
+	margin-top: 3px;
+	background-color: transparent;
+    border-style: solid;
+	color: chartreuse;
+}
+button:focus-visible{
+    border-style: dashed;
+	outline: none;
+}
+/*стиль полей ввода*/
+input{
+	margin-top: 3px;
+	background-color: transparent;
+    color: chartreuse;
+    border-style: solid;
+}
+input:focus-visible{
+    border-style: dashed;
+	outline: none;
+}
+select{
+	margin-top: 3px;
+	background-color: black;
+    color: chartreuse;
+    border-style: solid;
+	border-width: 2px;
+}
+select:focus-visible{
+    border-style: dashed;
+	outline: none;
+	border-width: 2px;
+}
+option{
+	color:chartreuse(71, 255, 35);
+	background:black;
+  }
+
+/* рвскрашиваем ссылки в таблице */
+table tr:nth-child(odd) > th > * {
+	color: chartreuse;
+	text-decoration: none;
+}
+table tr:nth-child(even) > th > * {
+	color: green;
+	text-decoration: none;
+}
+
+table tr:nth-child(odd):hover > th > * {
+	color: #242424;
+	text-decoration: none;
+}
+table tr:nth-child(even):hover > th > * {
+	color: black;
+	text-decoration: black;
+}
+
+/* раскрашиваем строки таблицы  
+ :nth-child(even) - получает четные элементы
+ :nth-child(odd) - нечетные  */
+
+table tr:nth-child(even){
+	background-color:black; /*цвет фона*/
+	color: green; /*цвет текста*/
+	transition: color 0.2s ease, background-color 0.2s ease; /* добавляет плавный переход параметров */
+}
+table tr:nth-child(even):hover { /* :hover = при наведении курсора */
+    background-color: green;
+    color: black;
+}
+table tr:nth-child(odd){
+	background-color: #242424;
+	color: chartreuse;
+	transition: color 0.2s ease, background-color 0.2s ease;
+}
+table tr:nth-child(odd):hover {
+    background-color: chartreuse;
+    color: #242424;
+}

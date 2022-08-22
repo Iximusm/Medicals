@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<HTML>
+	<HEAD>
+		<TITLE>Creating an order</TITLE>
+		<link rel="stylesheet" href="./Orders.css">
+	</HEAD>
+	<BODY>
+		<h1>Создание заказа</h1>
+		<hr>
+
+		<table width="100%" cellpadding="5" id="Tbl">
+			<tr class="row1">
+				<th>ФИО</th>
+				<th>возраст</th>
+				<th>пол</th>
+				<th>период доставки (с даты по дату)</th>
+				<th>расписание доставки </th>
+				<th>дни недели питания </th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr class="row2">
+				<th><a href="http://localhost:3000/diet/diet.html">Козлов Венедикт Вадимович</a></th>
+				<th>19</th>
+				<th>М</th>
+				<th>18.04.2022 - 29.04.2022 с 07:00 до 15:00</th>
+				<th><a href="deliveryPeriod">Ежедневно</a></th>
+				<th><a href="deliverySchedule">Пн-Вс</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row1">
+				<th>Зюкин Алексей Николаевич</th>
+				<th>42</th>
+				<th>М</th>
+				<th>02.01.2022 - 12.01.2022 с 17:00 до 20:00</th>
+				<th><a href="deliveryPeriod">Ежедневно</a></th>
+				<th><a href="deliverySchedule">Пн-Сб</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row2">
+				<th>Запольский Иван Юльевич</th>
+				<th>49</th>
+				<th>М</th>
+				<th>12.07.2022 - 22.07.2022 с 10:00 до 18:00</th>
+				<th><a href="deliveryPeriod">День через день</a></th>
+				<th><a href="deliverySchedule">Пн-Ср-Пт</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row1">
+				<th>Хохлов Максим Евгеньевич</th>
+				<th>42</th>
+				<th>М</th>
+				<th>15.09.2022 - 25.09.2022 с 07:00 до 16:00</th>
+				<th><a href="deliveryPeriod">Ежедневный</a></th>
+				<th><a href="deliverySchedule">Пн-Вс</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row2">
+				<th>Лернер Максим Анатольевич</th>
+				<th>38</th>
+				<th>М</th>
+				<th>15.05.2022 - 25.05.2022 с 07:00 до 12:00</th>
+				<th><a href="deliveryPeriod">День через день</a></th>
+				<th><a href="deliverySchedule">Пн-Сб</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row1">
+				<th><a href="http://localhost:3000/diet/diet.html">Хохлова Анна Николаевна</a></th>
+				<th>42</th>
+				<th>Ж</th>
+				<th>20.04.2022 - 22.04.2022 с 09:00 до 19:00</th>
+				<th><a href="deliveryPeriod">Через два дня на третий</a></th>
+				<th><a href="deliverySchedule">Пн-Вс</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row2">
+				<th><a href="http://localhost:3000/diet/diet.html">Тихонов Николай Олегович</a></th>
+				<th>18</th>
+				<th>М</th>
+				<th>20.08.2022 - 22.08.2022 с 11:00 до 19:00</th>
+				<th><a href="deliveryPeriod">Ежедневно</a></th>
+				<th><a href="deliverySchedule">Вт-Ср-Чт</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row1">
+				<th>Хохлов Евгений Евгеньевич</th>
+				<th>34</th>
+				<th>М</th>
+				<th>20.05.2022 - 22.05.2022 с 09:00 до 18:00</th>
+				<th><a href="tdeliveryPeriod">Ежедневно</a></th>
+				<th><a href="deliverySchedule">Пн-Пт</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row2">
+				<th>Русских Даниил Денисович</th>
+				<th>61</th>
+				<th>М</th>
+				<th>20.04.2022 - 22.04.2022 с 09:00 до 19:00</th>
+				<th><a href="deliveryPeriod">День через день</a></th>
+				<th><a href="deliverySchedule">Пн-Сб</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row1">
+				<th>Яковлев Егор Борисович</th>
+				<th>46</th>
+				<th>М</th>
+				<th>21.03.2022 - 25.03.2022 с 09:00 до 19:00</th>
+				<th><a href="deliveryPeriod">День через два дня</a></th>
+				<th><a href="deliverySchedule">Пн-Вс</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row2">
+				<th>Певчев Иван Иванович</th>
+				<th>39</th>
+				<th>М</th>
+				<th>11.02.2022 - 17.02 .2022 с 07:30 до 20:00</th>
+				<th><a href="deliveryPeriod">Ежедневно</a></th>
+				<th><a href="deliverySchedule">Пн-Ср-Пт-Вс</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row1">
+				<th>Надыкто Алексей Сергеевич</th>
+				<th>78</th>
+				<th>М</th>
+				<th>16.06.2022 - 22.06.2022 с 05:45 до 14:30</th>
+				<th><a href="deliveryPeriod">Ежедневно</a></th>
+				<th><a href="deliverySchedule">Пн-Чт</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+			<tr class="row2">
+				<th>Харченко Диана Валерьевна</th>
+				<th>25</th>
+				<th>Ж</th>
+				<th>10.01.2022 - 20.01.2022 с 15:00 до 22:00</th>
+				<th><a href="deliveryPeriod">Ежедневно</a></th>
+				<th><a href="deliverySchedule">Пн-Пт</a></th>
+				<th><button id="Del" onclick="deleteRow(event)">X</button></th>
+				<th><button id="Red" onclick="redactRow(event)">/</button></th>
+			</tr>
+		</table>
+		
+		<hr>
+
+		<div>
+			<input type="text" id="NewName" placeholder="ФИО">
+			<input type="number" id="NewAge" placeholder="18">
+			<select id="NewSex" placeholder="М">
+				<option value="М">М</option>
+				<option value="Ж">Ж</option>
+			</select>
+			<input type="meeting" id="NewH" placeholder="">
+			<input type="deliveryPeriod" id="NewDeliveryPeriod" placeholder="Ежедневно">
+			<input type="deliverySchedule" id="NewDeliverySchedule" placeholder="Пн-Вс">
+			<button id="New" onclick="addRow()">Добавить</button>
+		</div>
+		<script src="./Orders.js">	</script>
+	</BODY>
+</HTML>
+

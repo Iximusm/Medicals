@@ -1,0 +1,49 @@
+.curs{
+  cursor: pointer;
+}
+
+.t_show{
+    transform: rotate(0deg); 
+}
+
+.t_hide{
+    transform: rotate(-180deg);
+}
+
+body{
+  margin:0;
+}
+
+a{
+  background: #000; /* Черный фон у ссылки при наведении будет просвечивать */
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 50px auto;
+  position: relative;
+}
+a > div{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ef2ea1;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VmMmVhMSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYzAwOGMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: linear-gradient(to bottom,  #ef2ea1 0%,#ec008c 100%);
+  transition: all 124ms linear; /* Плавное изменение прозрачности при наведении */
+  opacity: 1;
+}
+a > div:hover{
+  opacity: 0.8;  /* Высветляем div при наведении */
+}
+a > span{
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200px;
+  line-height: 50px;
+  text-align: center;
+  pointer-events: none; /* Исключаем span из наведения */
+}
